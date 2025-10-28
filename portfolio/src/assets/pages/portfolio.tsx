@@ -11,7 +11,6 @@ function PortfolioPage() {
         Work and Projects
       </Typography>
       <Typography variant="body1" sx={{ my: '10px' }}>
-        {' '}
         Delivering complete digital solutions through code and camera. From building fast,
         responsive websites to capturing stunning visual content, I provide the technical foundation
         and visual assets that make your online presence stand out.

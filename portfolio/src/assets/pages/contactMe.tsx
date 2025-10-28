@@ -1,10 +1,12 @@
 import { Box, Grid, Typography, TextField, Stack } from '@mui/material';
 import ButtonComponent from '../components/buttonComponent';
 import ProfileInfo from '../components/profileInfo';
+import { customColors } from '../components/constants/colors';
+import { Send } from '@mui/icons-material';
 
 function ContactMePage() {
   return (
-    <Box sx={{ textAlign: 'center', p: 3, margin: 'auto' }}>
+    <Box sx={{ textAlign: 'center', p: 3, margin: 'auto', minHeight:"100vh" }}>
       <Typography variant="body1" sx={{ my: '10px' }}>
         CONTACT ME
       </Typography>
@@ -15,14 +17,16 @@ function ContactMePage() {
         Connect with us effortlessly! Click the "Contact Me" button to reach out and let's discuss
         how we can transform your digital experiences into unforgettable journeys.
       </Typography>
-      <Grid container spacing={0}>
-        <Grid size={6}>
-          <Stack component="form">
+      <Grid container gap={6} sx={{justifyContent:"space-around"}}>
+        <Grid size={4}>
+          <Stack component="form" sx={{width:"500px"}}>
             <TextField
               sx={{
                 my: '10px',
                 '& .MuiFilledInput-root': {
-                  backgroundColor: 'lightgray',
+                     input:{
+                    backgroundColor:"lightgray"
+                  }
                 },
               }}
               label="Name"
@@ -34,8 +38,12 @@ function ContactMePage() {
               sx={{
                 my: '10px ',
                 '& .MuiFilledInput-root': {
-                  backgroundColor: 'lightgray',
+                
+                  input:{
+                    backgroundColor:"lightgray"
+                  }
                 },
+
               }}
               label="Email"
               variant="filled"
@@ -43,23 +51,30 @@ function ContactMePage() {
             />
 
             <TextField
-              sx={{
-                my: '10px',
-                '& .MuiFilledInput-root': {
-                  backgroundColor: 'lightgray',
-                },
-              }}
-              label="Message"
-              variant="filled"
-              multiline
-              rows={6}
-              fullWidth
+            sx={{
+              my:"10px",
+              "& .MuiFilledInput-root":{
+                backgroundColor:"lightgray !important"
+              },
+              "& .hover":{
+                backgroundColor:"lightgray"
+              },
+              "& .Mui-Focused":{
+                backgroundColor:'lightgray'
+              }
+            }}
+         label="message"
+         variant='filled'
+         multiline
+         rows={6}
             />
-            <ButtonComponent type="submit" value="send" />
+            <Box alignItems="flex-end" width={800} textAlign={"center"}>
+            <ButtonComponent type="submit" value="send" icon={<Send/>} sx={{width:"200px", backgroundColor:customColors.primary,textAlign:"right"}}/>
+            </Box>
           </Stack>
         </Grid>
         <Grid size={6}>
-          <Typography variant="h4" gutterBottom color="purple">
+          <Typography variant="h4" gutterBottom sx={{color:customColors.primary}}>
             Personal Details
           </Typography>
           <ProfileInfo

@@ -6,15 +6,15 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PaletteIcon from '@mui/icons-material/Palette';
 function ServicesPage() {
   return (
-    <Box>
-      <Box sx={{}}>
+    <Box >
+      <Box sx={{minHeight:"100vh"}}>
         <Typography align="center" variant="body1" sx={{ my: '10px' }}>
           MY SERVICES
         </Typography>
-        <Typography variant="h4" align="center" sx={{ mb: '40px' }}>
+        <Typography variant="h4" align="center" sx={{ mb: '60px' }}>
           The Services I Provide
         </Typography>
-        <Grid container spacing={6} sx={{ margin: 'auto' }}>
+        <Grid container spacing={10} sx={{  }}>
           <Grid size={{ xs: 6 }}>
             <CardComponent
               sx={{

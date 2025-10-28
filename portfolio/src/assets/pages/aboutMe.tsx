@@ -10,7 +10,7 @@ function AboutMePage() {
   return (
     <Box
       sx={{
-        
+        minHeight:"100vh",
         color:"white"
       }}
     >
