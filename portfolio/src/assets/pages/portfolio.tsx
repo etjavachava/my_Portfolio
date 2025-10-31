@@ -3,18 +3,16 @@ import CardComponent from '../components/cardComponent';
 
 function PortfolioPage() {
   return (
-    <Box sx={{ minHeight: '100vh' }}>
-      <Typography variant="body1" sx={{ my: '20px' }}>
-        Portfolio
-      </Typography>
-      <Typography variant="h4" sx={{ mb: '20px' }}>
-        Work and Projects
-      </Typography>
-      <Typography variant="body1" sx={{ my: '10px' }}>
-        Delivering complete digital solutions through code and camera. From building fast,
-        responsive websites to capturing stunning visual content, I provide the technical foundation
-        and visual assets that make your online presence stand out.
-      </Typography>
+    <Box sx={{ minHeight: '100vh', my: '8rem' }}>
+      <Box textAlign={'center'}>
+        <Typography variant="h2" sx={{ my: '20px' }}>
+          Work and Projects
+        </Typography>
+        <Typography variant="body1" sx={{ mb: '20px' }}>
+          Delivering complete digital solutions through code and camera
+        </Typography>
+      </Box>
+
       <Grid container spacing={4}>
         <Grid
           size={{ xs: 4 }}

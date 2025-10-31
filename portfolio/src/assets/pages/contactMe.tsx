@@ -6,20 +6,22 @@ import { Send } from '@mui/icons-material';
 
 function ContactMePage() {
   return (
-    <Box sx={{ textAlign: 'center', p: 3, margin: 'auto', minHeight:"100vh" }}>
-      <Typography variant="body1" sx={{ my: '10px' }}>
-        CONTACT ME
-      </Typography>
-      <Typography variant="h4" sx={{ mb: 2 }}>
+    <Box sx={{ textAlign: 'center', p: 3, my:"8rem", minHeight:"100vh" }}>
+
+      <Typography variant="h2" sx={{ marginBottom:"20px"}}>
         Lets Make Something Together
       </Typography>
-      <Typography variant="body1" sx={{ mb: 4 }}>
+      <Typography variant="body1" sx={{ marginBottom:"20px" }}>
         Connect with us effortlessly! Click the "Contact Me" button to reach out and let's discuss
         how we can transform your digital experiences into unforgettable journeys.
       </Typography>
       <Grid container gap={6} sx={{justifyContent:"space-around"}}>
         <Grid size={4}>
           <Stack component="form" sx={{width:"500px"}}>
+            <Box sx={{backgroundColor:"rgba(157, 78, 221, 0.1)",  padding:"40px" ,
+            borderRadius:"12px" ,
+            border:" 1px solid rgba(157, 78, 221, 0.2);"}}>
+              <Typography textAlign={'left'} mb={1}>Name*</Typography>
             <TextField
               sx={{
                 my: '10px',
@@ -29,32 +31,41 @@ function ContactMePage() {
                   }
                 },
               }}
-              label="Name"
+          
               variant="filled"
               size="small"
               id="filled-basic"
+              fullWidth
+              required
             />
+            <Typography textAlign={'left'} mb={1}>Email*</Typography>
             <TextField
               sx={{
                 my: '10px ',
                 '& .MuiFilledInput-root': {
                 
                   input:{
-                    backgroundColor:"lightgray"
+                    backgroundColor:"lightgray",
+                    borderColor:"red"
                   }
                 },
 
               }}
-              label="Email"
               variant="filled"
               size="small"
+              fullWidth
+              required
+           
             />
-
+<Typography textAlign={'left'} mb={1}>Message*</Typography>
             <TextField
             sx={{
               my:"10px",
               "& .MuiFilledInput-root":{
-                backgroundColor:"lightgray !important"
+                backgroundColor:"lightgray !important",
+                input:{
+                  borderColor:"red"
+                }
               },
               "& .hover":{
                 backgroundColor:"lightgray"
@@ -63,18 +74,24 @@ function ContactMePage() {
                 backgroundColor:'lightgray'
               }
             }}
-         label="message"
+       
          variant='filled'
          multiline
          rows={6}
+         fullWidth
+         required
             />
-            <Box alignItems="flex-end" width={800} textAlign={"center"}>
-            <ButtonComponent type="submit" value="send" icon={<Send/>} sx={{width:"200px", backgroundColor:customColors.primary,textAlign:"right"}}/>
+              <ButtonComponent sx={{width:"100%",mt:"20px"}} type="submit" value="send" icon={<Send/>} />
             </Box>
+
+
+            
+          
+            
           </Stack>
         </Grid>
-        <Grid size={6}>
-          <Typography variant="h4" gutterBottom sx={{color:customColors.primary}}>
+        <Grid size={6} >
+          <Typography variant="h3" gutterBottom sx={{color:customColors.primary}}>
             Personal Details
           </Typography>
           <ProfileInfo

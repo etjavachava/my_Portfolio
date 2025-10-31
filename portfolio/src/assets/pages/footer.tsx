@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import NavBar from '../components/links';
-import { navLinks } from './home';
+import { navLinks } from './headerSection';
 import {
   FacebookIcon,
   GitHubIcon,
@@ -14,7 +14,7 @@ function FooterPage() {
     <>
       <Stack spacing={4}>
         <Box textAlign={'center'} justifyContent={'center'}>
-          <Typography>Ernest</Typography>
+          <Typography variant="h5">Ernest</Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <NavBar links={navLinks} />
@@ -26,8 +26,7 @@ function FooterPage() {
           <LinkedInIcon />
         </Box>
       </Stack>
-      <Box sx={{backgroundColor:customColors.primary
-      }} padding={2}>
+      <Box sx={{ backgroundColor: customColors.primary }} padding={2}>
         <Typography textAlign={'center'}>© 2025 Ernest All Rights Reserved.</Typography>
       </Box>
     </>

@@ -1,45 +1,64 @@
-import AboutMePage from "./assets/pages/aboutMe";
-import Home from "./assets/pages/home";
-import { Box } from "@mui/material";
-import ServicesPage from "./assets/pages/myServices";
-import PortfolioPage from "./assets/pages/portfolio";
-import ContactMePage from "./assets/pages/contactMe";
-import FooterPage from "./assets/pages/footer";
-import { customColors } from "./assets/components/constants/colors";
+import { lazy, Suspense } from 'react';
+import { Box, Container } from '@mui/material';
+import { customColors } from './assets/components/constants/colors';
+import Navigation from './assets/pages/headerSection';
+import LoadingComponent from './assets/components/LoadingComponent';
+
+const Home = lazy(() => import('./assets/pages/home'));
+const AboutMePage = lazy(() => import('./assets/pages/aboutMe'));
+const ServicesPage = lazy(() => import('./assets/pages/myServices'));
+const PortfolioPage = lazy(() => import('./assets/pages/portfolio'));
+const ContactMePage = lazy(() => import('./assets/pages/contactMe'));
+const FooterPage = lazy(() => import('./assets/pages/footer'));
 function App() {
   return (
-   < Box component="div" sx={{ backgroundColor: customColors.background,}}>
-      <Box 
-      component="main" 
-      sx={{
-       
-        color:customColors.textColor,
-        maxWidth: "1400px",
-        mx: "auto", 
-        px: 3
-      }}
+    <Box
+      component="div"
+      sx={{ backgroundColor: customColors.background, minHeight: '100vh', color: 'white' }}
     >
-      <Box component="section" id="home">
-        <Home />
-      </Box>
-      <Box component="section" id="about">
-        <AboutMePage />
-      </Box>
-      <Box component="section" id="services">
-        <ServicesPage />
-      </Box>
-      <Box component="section" id="portfolio">
-        <PortfolioPage />
-      </Box>
-      <Box component="section" id="contact">
-        <ContactMePage />
-      </Box>
-      <Box component="section" id="footer">
-        <FooterPage />
-      </Box>
-    </Box>   
-   </Box>
-    
+      <Suspense fallback={<LoadingComponent />}>
+        <Box
+          component="nav"
+          sx={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 1000,
+            width: '100%',
+            backgroundColor: 'black',
+          }}
+        >
+          <Container>
+            <Navigation />
+          </Container>
+        </Box>
+        <Box
+          component="section"
+          id="home"
+          sx={{ background: 'linear-gradient(135deg, #000000 0%, #1a0033 100%)' }}
+        >
+          <Container>
+            <Home />
+          </Container>
+        </Box>
+        <Container maxWidth="lg" sx={{ color: 'white', lineHeight: 1.6 }}>
+          <Box component="section" id="about">
+            <AboutMePage />
+          </Box>
+          <Box component="section" id="services">
+            <ServicesPage />
+          </Box>
+          <Box component="section" id="portfolio">
+            <PortfolioPage />
+          </Box>
+          <Box component="section" id="contact">
+            <ContactMePage />
+          </Box>
+        </Container>
+        <Box component="section" id="footer">
+          <FooterPage />
+        </Box>
+      </Suspense>
+    </Box>
   );
 }
 

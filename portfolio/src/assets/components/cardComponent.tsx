@@ -24,7 +24,8 @@ CardIcon?:React.ReactNode;
   sx?: any;
   onClick?: () => void;
   hover?: boolean;
-  
+  minHeight?:number| string
+  gap?:number | string
 }
 
 function CardComponent({
@@ -41,16 +42,20 @@ function CardComponent({
   maxWidth,
   elevation = 0,
   sx = {},
-  
+  minHeight="260px",
+  gap="30px",
   onClick,
   hover = false,
 }: CardComponentProps) {
   return (
-    <Card
+    <Card 
+    
       sx={{
+        minHeight,
         width,
         height,
         maxWidth,
+        gap:{gap},
         cursor: onClick ? "pointer" : "default",
         transition: hover ? "all 0.3s ease-in-out" : "none",
         "&:hover": hover
@@ -63,6 +68,8 @@ function CardComponent({
       }}
       elevation={elevation}
       onClick={onClick}
+      
+      
     >
  {CardIcon &&(
         <Box sx={{mb:1}}>
@@ -85,21 +92,21 @@ function CardComponent({
       <CardContent>
       
         {title && (
-          <Typography gutterBottom variant="h6" component="h2" fontWeight={800}>
+          <Typography gutterBottom variant="h4" component="h2" fontWeight={800}>
             {title}
           </Typography>
         )}
 
       
         {subtitle && (
-          <Typography variant="body1"  gutterBottom>
+          <Typography variant="overline"  gutterBottom>
             {subtitle}
           </Typography>
         )}
 
       
         {description && (
-          <Typography variant="caption" >
+          <Typography variant="body2" >
             {description}
           </Typography>
         )}

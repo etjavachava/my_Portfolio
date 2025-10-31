@@ -5,14 +5,9 @@ interface Color_props{
     primary:string
     platinum:string
 }
-
-
-
-
-
 export const customColors:Color_props={
  background: "#000000ff",
-primary: "#9024B6",
+primary: "#9D4EDD",
 secondaryTextColor:"#000000",
 platinum: "#e5e5e5ff",
 textColor: "#ffffffff",

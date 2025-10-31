@@ -6,15 +6,15 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PaletteIcon from '@mui/icons-material/Palette';
 function ServicesPage() {
   return (
-    <Box >
-      <Box sx={{minHeight:"100vh"}}>
-        <Typography align="center" variant="body1" sx={{ my: '10px' }}>
+    <Box>
+      <Box sx={{ minHeight: '100vh', my: '8rem' }}>
+        <Typography align="center" variant="h2" sx={{ my: '10px' }}>
           MY SERVICES
         </Typography>
-        <Typography variant="h4" align="center" sx={{ mb: '60px' }}>
+        <Typography variant="body1" align="center" sx={{ mb: '60px' }}>
           The Services I Provide
         </Typography>
-        <Grid container spacing={10} sx={{  }}>
+        <Grid container spacing={10} sx={{}}>
           <Grid size={{ xs: 6 }}>
             <CardComponent
               sx={{
@@ -26,7 +26,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={600}
+              width={500}
               height={180}
               CardIcon={
                 <CodeIcon
@@ -39,10 +39,10 @@ function ServicesPage() {
               }
               title="Web development"
               description="I'm a skilled web developer passionate about crafting fast, responsive, and visually engaging websites with clean, efficient code and thoughtful design."
-              elevation={1}
+              elevation={6}
             />
           </Grid>
-          <Grid size={{ xs: 6 }}>
+          <Grid size={{ xs: 12 ,lg:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -53,7 +53,7 @@ function ServicesPage() {
                 backgroundColor: '#9024B6',
                 color: 'white',
               }}
-              width={600}
+              width={500}
               height={180}
               CardIcon={
                 <CameraAltIcon sx={{ fontSize: '150px', textAlign: 'left', color: 'white' }} />
@@ -64,7 +64,7 @@ function ServicesPage() {
             />
           </Grid>
 
-          <Grid size={{ xs: 6 }}>
+          <Grid size={{  xs: 12 ,lg:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -75,7 +75,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={600}
+              width={500}
               height={180}
               CardIcon={
                 <SmartToyIcon
@@ -91,7 +91,7 @@ function ServicesPage() {
               elevation={1}
             />
           </Grid>
-          <Grid size={{ xs: 6 }}>
+          <Grid size={{  xs: 12 ,lg:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -102,7 +102,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={600}
+              width={500}
               height={180}
               CardIcon={
                 <PaletteIcon
@@ -116,6 +116,7 @@ function ServicesPage() {
               title="Complete Brand Packages"
               description="I offer complete brand development—combining professional photography and custom web design to create cohesive, visually striking digital identities."
               elevation={2}
+              
             />
           </Grid>
         </Grid>

@@ -8,27 +8,59 @@ interface NavLink {
 
 interface NavbarProps {
   links: NavLink[];
-  color?:string
+  color?: string;
 }
-function NavBar({ links,color=customColors.textColor}: NavbarProps) {
+
+function NavBar({ links, color = customColors.textColor }: NavbarProps) {
+
+  const baseLinkStyles = {
+
+    position: 'relative', 
+    textDecoration: 'none', 
+    color: color,
+    fontFamily: "poppins",
+    paddingBottom: '3px', 
+    overflow: 'hidden', 
+    
+   
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      height: '4px', 
+      bottom: 0,
+      left: 0,
+      backgroundColor: customColors.primary
+      , 
+      
+    
+      transform: 'scaleX(0)', 
+      transformOrigin: 'bottom left', 
+      transition: 'transform 0.3s ease-out',
+    },
+    
+  
+    '&:hover': {
+
+      '&::after': {
+        transform: 'scaleX(1)',
+      }
+    },
+    
+    '&:focus': { 
+      '&::after': {
+        transform: 'scaleX(1)',
+      },
+    },
+  };
+
   return (
-    <Box
-      component="nav" 
-    >
-      <Box  sx={{display:{xs:"none",md:"flex"},gap:4}}>
+    <Box component="nav">
+      <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
         {links.map((link) => (
-          <Typography variant="button"
-            sx={{
-              textDecoration: "none",
-             color:color,
-             fontFamily:"poppins",
-            
-              "&:hover": {
-                color: "red",
-                transition: "color 0.2s ease-in-out",
-              },
-              "&:focus": { color: "blue" },
-            }}
+          <Typography
+            variant="button"
+            sx={baseLinkStyles} // Apply the complex animation styles here
             key={link.href}
             component={"a"}
             href={link.href}

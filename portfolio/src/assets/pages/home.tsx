@@ -1,71 +1,66 @@
 import ButtonComponent from '../components/buttonComponent';
-import NavBar from '../components/links';
+
 import { Image } from '../components/imageComponent';
-import { Box, Grid, Typography } from '@mui/material';
-import { FileDownloadIcon } from '../components/constants/icons';
-import { ArrowForwardIosIcon } from '../components/constants/icons';
+import { Box, colors, Container, Grid, Typography } from '@mui/material';
 
 import theme from '../components/constants/theme';
+import { TypeAnimation } from 'react-type-animation';
+import { customColors } from '../components/constants/colors';
 
-export const navLinks = [
-  { label: 'HOME', href: '#home' },
-  { label: 'ABOUT ME', href: '#about' },
-  { label: 'MY SERVICES', href: '#services' },
-  { label: 'PORTFOLIO', href: '#portfolio' },
-  { label: 'TESTIMONIALS', href: '#contact' },
-  { label: 'CONTACT ME', href: '#contact' },
-];
 function Home() {
   function hireHandler() {
     console.log('button clicked');
   }
   return (
-    <Box sx={{ margin: 'auto' }}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginTop: '5px',
-        }}
-      >
-        <Typography variant="h3">ERNEST</Typography>
-        <NavBar links={navLinks} />
-        <ButtonComponent type="button" value="Download CV" icon={<FileDownloadIcon />} />
-      </Box>
-      <Box component="main">
-        <Grid container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography>I am</Typography>
-              <Typography variant="h4">Ernest Javachava</Typography>
-              <Typography
-                variant="h3"
-                sx={{ fontWeight: '800' }}
-                color={theme.palette.secondary.main}
-              >
-                Web developer &
-              </Typography>
-              <Typography variant="h3" sx={{ marginBottom: '10px' }}>
-                {' '}
-                Photographer
-              </Typography>
+    <Container sx={{ borderBottom: '2px solid darkgray' }}>
+      <Grid container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
+        <Grid size={{ xs: 12, md: 6 }}>
+          <Box sx={{}}>
+            <Typography variant="body1" sx={{ marginBottom: '20px' }}>
+              I am
+            </Typography>
+
+            <Typography variant="h1" sx={{ marginBottom: '20px' }}>
+              Ernest Javachava
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{ fontWeight: 'normal', marginBottom: '20px' }}
+              color={'primary'}
+            >
+              <TypeAnimation
+                sequence={['Web Developer', 2000, '', 50, 'Photographer', 2000, '', 50]}
+                repeat={Infinity}
+              />
+            </Typography>
+            <Box sx={{ display: 'flex', gap: '30px' }}>
               <ButtonComponent
                 type="button"
                 onClick={hireHandler}
-                value="Hire"
-                icon={<ArrowForwardIosIcon />}
+                value="CONTACT ME"
+                sx={{ backgroundColor: 'primary' }}
+              />
+              <ButtonComponent
+                type="button"
+                onClick={hireHandler}
+                value="VIEW MY PORTFOLIO"
+                variant="outlined"
               />
             </Box>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Box>
-              <Image src="./src/assets/images/ernest.png" width={600} height={670} />
-            </Box>
-          </Grid>
+          </Box>
         </Grid>
-      </Box>
-    </Box>
+        <Grid size={{ xs: 12, md: 6 }}>
+          <Box>
+            <Image
+              src="./src/assets/images/ernest.png"
+              alt="Ernest Javachava"
+              width={600}
+              height={670}
+            />
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 export default Home;
