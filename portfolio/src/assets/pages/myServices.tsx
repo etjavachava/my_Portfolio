@@ -39,7 +39,7 @@ function ServicesPage() {
               }
               title="Web development"
               description="I'm a skilled web developer passionate about crafting fast, responsive, and visually engaging websites with clean, efficient code and thoughtful design."
-              elevation={6}
+             
             />
           </Grid>
           <Grid size={{ xs: 12 ,lg:6 }}>
@@ -60,7 +60,7 @@ function ServicesPage() {
               }
               title="Photography"
               description="I deliver high-quality brand, product, and portrait photography that tells your story and strengthens your digital presence with authentic, professional visuals."
-              elevation={1}
+           
             />
           </Grid>
 
@@ -88,7 +88,7 @@ function ServicesPage() {
               }
               title="AI Chat Bots"
               description="I build intelligent chatbots that boost user engagement, deliver instant support, and enhance your website’s customer experience."
-              elevation={1}
+             
             />
           </Grid>
           <Grid size={{  xs: 12 ,lg:6 }}>
@@ -110,12 +110,13 @@ function ServicesPage() {
                     fontSize: '150px',
                     textAlign: 'left',
                     color: '#9024B6',
+             
                   }}
                 />
               }
               title="Complete Brand Packages"
               description="I offer complete brand development—combining professional photography and custom web design to create cohesive, visually striking digital identities."
-              elevation={2}
+              elevation={1}
               
             />
           </Grid>

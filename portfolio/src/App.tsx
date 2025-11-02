@@ -14,7 +14,7 @@ function App() {
   return (
     <Box
       component="div"
-      sx={{ backgroundColor: customColors.background, minHeight: '100vh', color: 'white' }}
+      sx={{ background:"linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 100%)", minHeight: '100vh', color: 'white' }}
     >
       <Suspense fallback={<LoadingComponent />}>
         <Box
@@ -24,7 +24,8 @@ function App() {
             top: 0,
             zIndex: 1000,
             width: '100%',
-            backgroundColor: 'black',
+       background:"linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 100%)",
+         borderBottom:"1px solid rgba(157, 78, 221, 0.3) " ,
           }}
         >
           <Container>
@@ -34,7 +35,7 @@ function App() {
         <Box
           component="section"
           id="home"
-          sx={{ background: 'linear-gradient(135deg, #000000 0%, #1a0033 100%)' }}
+        
         >
           <Container>
             <Home />

@@ -1,18 +1,17 @@
 import ButtonComponent from '../components/buttonComponent';
 
 import { Image } from '../components/imageComponent';
-import { Box, colors, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
-import theme from '../components/constants/theme';
 import { TypeAnimation } from 'react-type-animation';
-import { customColors } from '../components/constants/colors';
+
 
 function Home() {
   function hireHandler() {
     console.log('button clicked');
   }
   return (
-    <Container sx={{ borderBottom: '2px solid darkgray' }}>
+    <Container sx={{ borderBottom: "1px solid rgba(157, 78, 221, 0.3) " , }}>
       <Grid container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
         <Grid size={{ xs: 12, md: 6 }}>
           <Box sx={{}}>
@@ -42,7 +41,7 @@ function Home() {
               />
               <ButtonComponent
                 type="button"
-                onClick={hireHandler}
+                href='#portfolio'
                 value="VIEW MY PORTFOLIO"
                 variant="outlined"
               />

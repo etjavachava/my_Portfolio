@@ -1,6 +1,6 @@
 import { Button, Typography, type SxProps } from "@mui/material";
 import type { Theme } from "@mui/material/styles";
-import { customColors } from "./constants/colors";
+
 
 interface ButtonProp {
   type: "submit" | "button" | "reset";

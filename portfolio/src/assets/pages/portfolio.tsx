@@ -13,38 +13,36 @@ function PortfolioPage() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4}>
-        <Grid
-          size={{ xs: 4 }}
-          sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}
-        >
+      <Grid container spacing={4} justifyContent={'space-evenly'}>
+        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
             imageSrc="./src/assets/images/ernest2.jpg"
-            imageHeight={500}
-            width={400}
+            imageHeight={300}
+            width={300}
             title="Web Development"
+            description="Modern, responsive websites built with HTML, CSS, JavaScript & React. From landing pages to full-stack applications."
           />
         </Grid>
-        <Grid
-          size={{ xs: 4 }}
-          sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}
-        >
-          <CardComponent
-            imageSrc="./src/assets/images/puckey.jpg"
-            imageHeight={500}
-            width={400}
-            title="Photography"
-          />
-        </Grid>
-        <Grid
-          size={{ xs: 4 }}
-          sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}
-        >
+
+        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
             imageSrc="./src/assets/images/ernest2.jpg"
-            imageHeight={500}
-            width={400}
-            title="Chatbot"
+            imageHeight={300}
+            width={300}
+            title="Photography"
+            description=" Professional portrait photography for personal branding, events, and creative projects. Capturing authentic moments with style.
+                    "
+          />
+        </Grid>
+
+        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+          <CardComponent
+          
+            imageSrc="./src/assets/images/ernest2.jpg"
+            imageHeight={300}
+            width={300}
+            title="Whatsapp Chatbots"
+            description="Smart WhatsApp automation for businesses. Handle customer inquiries, take orders, and send updates directly on WhatsApp."
           />
         </Grid>
       </Grid>
