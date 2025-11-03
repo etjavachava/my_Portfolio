@@ -1,23 +1,14 @@
-FROM node:22
-
-# Install system dependencies (fixed for Debian-based image)
-RUN apt-get update && apt-get install -y \
-    git \
-    python3 \
-    make \
-    g++ \
-    redis-server \
-    && rm -rf /var/lib/apt/lists/*
+# Build stage
+FROM node:20-alpine AS build
 
 WORKDIR /app
-
-COPY package.json yarn.lock /app/
-RUN yarn install --ignore-optional --frozen-lockfile
-
-COPY . /app
+COPY package.json yarn.lock ./
+RUN yarn install
+COPY . .
 RUN yarn build
 
-
-
-EXPOSE 5174
-CMD ["/app/start.sh"]
+# Production stage
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,12 +1,12 @@
 import { Box, IconButton } from "@mui/material";
 import { FacebookIcon,GitHubIcon,WhatsAppIcon,LinkedInIcon } from "./constants/icons"; 
 interface SocialMediaLinksProps{
-    color?:string;
+
     sx?:any;
-    fontSize?:string;
+
 }
 
-function SocialMediaLinks({color,sx,fontSize}:SocialMediaLinksProps){
+function SocialMediaLinks({sx}:SocialMediaLinksProps){
 
     return(<>
  <Box  sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap:"20px",marginBottom:"20px",
@@ -53,9 +53,6 @@ function SocialMediaLinks({color,sx,fontSize}:SocialMediaLinksProps){
  },...sx}} />
             </IconButton>
       
- 
-        
-        
         </Box>
        
 

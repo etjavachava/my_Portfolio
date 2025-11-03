@@ -3,7 +3,7 @@ import CardComponent from '../components/cardComponent';
 
 function PortfolioPage() {
   return (
-    <Box sx={{ minHeight: '100vh', my: '8rem' }}>
+    <Box sx={{ minHeight: '100vh', my: '8rem',maxWidth: 1200, mx: 'auto', px: 2 }}>
       <Box textAlign={'center'}>
         <Typography variant="h2" sx={{ my: '20px' }}>
           Work and Projects
@@ -13,10 +13,10 @@ function PortfolioPage() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4} justifyContent={'space-evenly'}>
-        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+      <Grid container spacing={4} justifyContent={'space-evenly'} alignItems={'center'}>
+        <Grid size={{xs:12,xl:3}} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
-            imageSrc="./src/assets/images/ernest2.jpg"
+            imageSrc=".//images/ernest2.jpg"
             imageHeight={300}
             width={300}
             title="Web Development"
@@ -24,9 +24,9 @@ function PortfolioPage() {
           />
         </Grid>
 
-        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+        <Grid  sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
-            imageSrc="./src/assets/images/ernest2.jpg"
+            imageSrc="./images/ernest2.jpg"
             imageHeight={300}
             width={300}
             title="Photography"
@@ -35,15 +35,17 @@ function PortfolioPage() {
           />
         </Grid>
 
-        <Grid size={3} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+        <Grid size={{xs:12,xl:3}} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
           
-            imageSrc="./src/assets/images/ernest2.jpg"
+            imageSrc="./images/ernest2.jpg"
             imageHeight={300}
             width={300}
             title="Whatsapp Chatbots"
             description="Smart WhatsApp automation for businesses. Handle customer inquiries, take orders, and send updates directly on WhatsApp."
+            
           />
+         
         </Grid>
       </Grid>
     </Box>

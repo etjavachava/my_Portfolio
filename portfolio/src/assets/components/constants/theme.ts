@@ -10,7 +10,17 @@ let theme = createTheme({
       main:'#9D4EDD'
     },
 
-  }
+  },
+   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          scrollBehavior: "smooth",
+          scrollPaddingTop: "80px",
+        },
+      },
+    },
+  },
 });
 
 theme = responsiveFontSizes(theme);

@@ -51,7 +51,7 @@ function Home() {
         <Grid size={{ xs: 12, md: 6 }}>
           <Box>
             <Image
-              src="./src/assets/images/ernest.png"
+              src="./images/ernest.png"
               alt="Ernest Javachava"
               width={600}
               height={670}

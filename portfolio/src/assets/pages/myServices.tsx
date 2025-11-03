@@ -7,7 +7,7 @@ import PaletteIcon from '@mui/icons-material/Palette';
 function ServicesPage() {
   return (
     <Box>
-      <Box sx={{ minHeight: '100vh', my: '8rem' }}>
+      <Box sx={{ minHeight: '100vh', my: '8rem',maxWidth: 1200, mx: 'auto', px: 2 }}>
         <Typography align="center" variant="h2" sx={{ my: '10px' }}>
           MY SERVICES
         </Typography>
@@ -15,7 +15,7 @@ function ServicesPage() {
           The Services I Provide
         </Typography>
         <Grid container spacing={10} sx={{}}>
-          <Grid size={{ xs: 6 }}>
+          <Grid size={{ xs: 12, xl:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -26,8 +26,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={500}
-              height={180}
+             
               CardIcon={
                 <CodeIcon
                   sx={{
@@ -53,8 +52,7 @@ function ServicesPage() {
                 backgroundColor: '#9024B6',
                 color: 'white',
               }}
-              width={500}
-              height={180}
+          
               CardIcon={
                 <CameraAltIcon sx={{ fontSize: '150px', textAlign: 'left', color: 'white' }} />
               }
@@ -75,8 +73,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={500}
-              height={180}
+            
               CardIcon={
                 <SmartToyIcon
                   sx={{
@@ -102,8 +99,7 @@ function ServicesPage() {
                 backgroundColor: '#fff',
                 color: '#9024B6',
               }}
-              width={500}
-              height={180}
+            
               CardIcon={
                 <PaletteIcon
                   sx={{

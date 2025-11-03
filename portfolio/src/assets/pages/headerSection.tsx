@@ -17,7 +17,6 @@ function Navigation() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-  
         py: '20px',
       }}
     >

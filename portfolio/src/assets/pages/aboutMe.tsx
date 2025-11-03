@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { Image } from '../components/imageComponent';
-import theme from '../components/constants/theme';
 import { customColors } from '../components/constants/colors';
 
 function AboutMePage() {
@@ -24,7 +23,7 @@ function AboutMePage() {
       <Grid container spacing={2} alignItems={"center"}>
         <Grid size={{ xs: 12, md: 6 }}>
           <Image
-            src="./src/assets/images/ernest.png"
+            src="./images/ernest.png"
             alt="Ernest Javachava's profile"
             width={400}
             height={480}

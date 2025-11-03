@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Box, Container } from '@mui/material';
-import { customColors } from './assets/components/constants/colors';
+
 import Navigation from './assets/pages/headerSection';
 import LoadingComponent from './assets/components/LoadingComponent';
 
