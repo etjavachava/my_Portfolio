@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import CardComponent from '../components/cardComponent';
+import { Height } from '@mui/icons-material';
 
 function PortfolioPage() {
   return (
@@ -13,34 +14,34 @@ function PortfolioPage() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4} justifyContent={'space-evenly'} alignItems={'center'}>
-        <Grid size={{xs:12,xl:3}} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+      <Grid container spacing={4} >
+        <Grid  size={{xs:12,md:4}} >
           <CardComponent
             imageSrc=".//images/ernest2.jpg"
             imageHeight={300}
-            width={300}
+              sx={{height:"480px"}}
             title="Web Development"
             description="Modern, responsive websites built with HTML, CSS, JavaScript & React. From landing pages to full-stack applications."
           />
         </Grid>
 
-        <Grid  sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+        <Grid size={{xs:12,md:4}}>
           <CardComponent
             imageSrc="./images/ernest2.jpg"
             imageHeight={300}
-            width={300}
+         sx={{height:"480px"}}
             title="Photography"
             description=" Professional portrait photography for personal branding, events, and creative projects. Capturing authentic moments with style.
                     "
           />
         </Grid>
 
-        <Grid size={{xs:12,xl:3}} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+        <Grid size={{xs:12,md:4}} sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
           <CardComponent
           
             imageSrc="./images/ernest2.jpg"
             imageHeight={300}
-            width={300}
+         sx={{height:"480px"}}
             title="Whatsapp Chatbots"
             description="Smart WhatsApp automation for businesses. Handle customer inquiries, take orders, and send updates directly on WhatsApp."
             

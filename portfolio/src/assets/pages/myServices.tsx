@@ -15,7 +15,7 @@ function ServicesPage() {
           The Services I Provide
         </Typography>
         <Grid container spacing={10} sx={{}}>
-          <Grid size={{ xs: 12, xl:6 }}>
+          <Grid size={{ xs: 12, md:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -41,7 +41,7 @@ function ServicesPage() {
              
             />
           </Grid>
-          <Grid size={{ xs: 12 ,lg:6 }}>
+          <Grid size={{ xs: 12 ,md:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -62,7 +62,7 @@ function ServicesPage() {
             />
           </Grid>
 
-          <Grid size={{  xs: 12 ,lg:6 }}>
+          <Grid size={{  xs: 12 ,md:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',
@@ -88,7 +88,7 @@ function ServicesPage() {
              
             />
           </Grid>
-          <Grid size={{  xs: 12 ,lg:6 }}>
+          <Grid size={{  xs: 12 ,md:6 }}>
             <CardComponent
               sx={{
                 display: 'flex',

@@ -6,7 +6,7 @@ import { Send } from '@mui/icons-material';
 
 function ContactMePage() {
   return (
-    <Box sx={{ textAlign: 'center', p: 3, my:"8rem", minHeight:"100vh" }}>
+    <Box sx={{ textAlign: 'center', my:"8rem",maxWidth: 1200, mx: 'auto', px: 2   }}>
 
       <Typography variant="h2" sx={{ marginBottom:"20px"}}>
         Lets Make Something Together
@@ -15,9 +15,9 @@ function ContactMePage() {
         Connect with us effortlessly! Click the "Contact Me" button to reach out and let's discuss
         how we can transform your digital experiences into unforgettable journeys.
       </Typography>
-      <Grid container gap={6} sx={{justifyContent:"space-around"}}>
-        <Grid size={4}>
-          <Stack component="form" sx={{width:"500px"}}>
+      <Grid container  >
+        <Grid size={{xs:12,md:6}}>
+          <Stack component="form" >
             <Box sx={{backgroundColor:"rgba(157, 78, 221, 0.1)",  padding:"40px" ,
             borderRadius:"12px" ,
             border:" 1px solid rgba(157, 78, 221, 0.2);"}}>
@@ -77,20 +77,17 @@ function ContactMePage() {
        
          variant='filled'
          multiline
-         rows={6}
+         rows={5}
          fullWidth
          required
             />
               <ButtonComponent sx={{width:"100%",mt:"20px"}} type="submit" value="send" icon={<Send/>} />
             </Box>
 
-
-            
-          
             
           </Stack>
         </Grid>
-        <Grid size={6} >
+        <Grid size={{xs:12,md:6}} >
           <Typography variant="h3" gutterBottom sx={{color:customColors.primary}}>
             Personal Details
           </Typography>

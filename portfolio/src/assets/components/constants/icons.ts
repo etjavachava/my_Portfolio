@@ -4,10 +4,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import MenuIcon from '@mui/icons-material/Menu';
 
 export{
-    FileDownloadIcon,GitHubIcon,FacebookIcon,LinkedInIcon,WhatsAppIcon,ArrowForwardIosIcon
+    FileDownloadIcon,GitHubIcon,FacebookIcon,LinkedInIcon,WhatsAppIcon,ArrowForwardIosIcon,MenuIcon
 }
 
 export const Icons={
@@ -16,5 +16,6 @@ export const Icons={
     GitHubIcon:GitHubIcon,
     FacebookIcon:FacebookIcon,
     LinkedInIcon:LinkedInIcon,
-    arrow:ArrowForwardIosIcon
+    arrow:ArrowForwardIosIcon,
+    MenuIcon:MenuIcon
 }

@@ -60,7 +60,7 @@ function NavBar({ links, color = customColors.textColor }: NavbarProps) {
         {links.map((link) => (
           <Typography
             variant="button"
-            sx={baseLinkStyles} // Apply the complex animation styles here
+            sx={baseLinkStyles}
             key={link.href}
             component={"a"}
             href={link.href}

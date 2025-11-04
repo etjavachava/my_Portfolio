@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import NavBar from '../components/links';
 import ButtonComponent from '../components/buttonComponent';
-import { FileDownloadIcon } from '../components/constants/icons';
+import { FileDownloadIcon, MenuIcon } from '../components/constants/icons';
 
 export const navLinks = [
   { label: 'HOME', href: '#home' },
@@ -22,7 +22,10 @@ function Navigation() {
     >
       <Typography variant="h3">ERNEST</Typography>
       <NavBar links={navLinks} />
-      <ButtonComponent type="button" value="Download CV"  icon={<FileDownloadIcon />} />
+      <ButtonComponent type="button" value="Download CV"  icon={<FileDownloadIcon />} sx={{display:{xs:"none",lg:"flex"}}} />
+      <IconButton sx={{display:{xs:'flex',md:"none"}}}>
+        <MenuIcon sx={{color:'white', fontSize:"30px"}}/>
+      </IconButton>
     </Box>
   );
 }
