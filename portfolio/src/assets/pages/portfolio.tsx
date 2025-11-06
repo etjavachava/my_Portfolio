@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import CardComponent from '../components/cardComponent';
-import { Height } from '@mui/icons-material';
+
 
 function PortfolioPage() {
   return (
