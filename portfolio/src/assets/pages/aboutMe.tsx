@@ -25,8 +25,7 @@ function AboutMePage() {
           <Image
             src="./images/ernest.png"
             alt="Ernest Javachava's profile"
-            width={400}
-            height={480}
+          
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
