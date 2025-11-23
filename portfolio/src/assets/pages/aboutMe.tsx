@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { Image } from '../components/imageComponent';
-import { customColors } from '../components/constants/colors';
+
 
 function AboutMePage() {
   return (
@@ -31,7 +31,7 @@ function AboutMePage() {
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant="body1" mb={'25px'}>
             I'm Ernest Javachava, a{' '}
-            <Box component="span" color={customColors.primary}>
+            <Box component="span" >
               web developer and photographer
             </Box>{' '}
             who brings creativity and technical skill together to create meaningful digital
@@ -40,7 +40,7 @@ function AboutMePage() {
 
           <Typography variant="body1" mb={'25px'}>
             My approach combines{' '}
-            <Box component="span" color={customColors.primary}>
+            <Box component="span" >
               clean code with visual storytelling
             </Box>{' '}
             . Whether I'm building a website or capturing a moment through my lens, I focus on

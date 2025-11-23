@@ -1,5 +1,6 @@
 import type { TypographyVariantsOptions } from '@mui/material';
-import { customColors } from './colors';
+import { goldMain, textPrimary, textSecondary, textTertiary } from './themes/colors';
+
 
 export const typography: TypographyVariantsOptions = {
   fontFamily: '"Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif',
@@ -8,17 +9,19 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 700,
     fontSize: '3.5rem',
     lineHeight: 1.2,
+    color:goldMain
   },
   h2: {
     fontWeight: 700,
     fontSize: '2.625rem',
     lineHeight: 1.3,
-    color:customColors.primary
+color:goldMain
   },
   h3: {
     fontWeight: 700,
     fontSize: '1.75rem',
     lineHeight: 1.4,
+    color:textPrimary
   },
   h4: {
     fontWeight: 600,
@@ -42,6 +45,7 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 400,
     fontSize: '1.125rem',
     lineHeight: 1.6,
+    color:textPrimary
   },
   body2: {
     fontWeight: 400,
@@ -53,6 +57,7 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 600,
     fontSize: '1rem',
     lineHeight: 1.6,
+    color:textSecondary
   },
   subtitle2: {
     fontWeight: 600,
@@ -72,6 +77,7 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 400,
     fontSize: '0.875red',
     lineHeight: 1.6,
+    color:textTertiary,
   },
 
   overline: {

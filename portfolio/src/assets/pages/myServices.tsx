@@ -4,9 +4,13 @@ import CodeIcon from '@mui/icons-material/Code';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PaletteIcon from '@mui/icons-material/Palette';
+
 function ServicesPage() {
   return (
-    <Box>
+    <Box sx={{   textAlign:{
+                  xs:"center",
+             
+                }}}>
       <Box sx={{ minHeight: '100vh', my: '8rem',maxWidth: 1200, mx: 'auto', px: 2 }}>
         <Typography align="center" variant="h2" sx={{ my: '10px' }}>
           MY SERVICES
@@ -16,25 +20,30 @@ function ServicesPage() {
         </Typography>
         <Grid container spacing={10} sx={{}}>
           <Grid size={{ xs: 12, md:6 }}>
-            <CardComponent
+            <CardComponent 
               sx={{
                 display: 'flex',
+                    flexDirection:{
+                  xs:"column",
+                  md:"row"
+                },
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 pr: '20px',
-                borderRadius: '12px',
-                backgroundColor: '#fff',
-                color: '#9024B6',
               }}
              
               CardIcon={
-                <CodeIcon
+                
+                <CodeIcon 
+                   color='primary'
                   sx={{
-                    fontSize: '150px',
-                    textAlign: 'left',
-                    color: '#9024B6',
+                    fontSize:"150px",
+                    
+                    textAlign:'center',
+                     
+                 
                   }}
-                />
+              />
               }
               title="Web development"
               description="I'm a skilled web developer passionate about crafting fast, responsive, and visually engaging websites with clean, efficient code and thoughtful design."
@@ -45,16 +54,27 @@ function ServicesPage() {
             <CardComponent
               sx={{
                 display: 'flex',
+                    flexDirection:{
+                  xs:"column",
+                  md:"row"
+                },
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 pr: '20px',
                 borderRadius: '12px',
-                backgroundColor: '#9024B6',
-                color: 'white',
+               
+             
               }}
           
               CardIcon={
-                <CameraAltIcon sx={{ fontSize: '150px', textAlign: 'left', color: 'white' }} />
+                <CameraAltIcon 
+                color='primary' 
+                sx={{ fontSize: '150px', textAlign:{
+                  xs:"center",
+                  md:"left"
+                
+                },
+                 }} />
               }
               title="Photography"
               description="I deliver high-quality brand, product, and portrait photography that tells your story and strengthens your digital presence with authentic, professional visuals."
@@ -66,20 +86,23 @@ function ServicesPage() {
             <CardComponent
               sx={{
                 display: 'flex',
+                    flexDirection:{
+                  xs:"column",
+                  md:"row"
+                },
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 pr: '20px',
                 borderRadius: '12px',
-                backgroundColor: '#fff',
-                color: '#9024B6',
+         
               }}
             
               CardIcon={
                 <SmartToyIcon
+                color='primary'
                   sx={{
                     fontSize: '150px',
                     textAlign: 'left',
-                    color: '#9024B6',
                   }}
                 />
               }
@@ -89,23 +112,25 @@ function ServicesPage() {
             />
           </Grid>
           <Grid size={{  xs: 12 ,md:6 }}>
-            <CardComponent
+            <CardComponent 
               sx={{
-                display: 'flex',
+                display:"flex",
+                flexDirection:{
+                  xs:"column",
+                  md:"row"
+                },
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 pr: '20px',
                 borderRadius: '12px',
-                backgroundColor: '#fff',
-                color: '#9024B6',
               }}
             
               CardIcon={
-                <PaletteIcon
+                <PaletteIcon color='primary'
                   sx={{
                     fontSize: '150px',
                     textAlign: 'left',
-                    color: '#9024B6',
+                    
              
                   }}
                 />

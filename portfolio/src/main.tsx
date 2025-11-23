@@ -8,7 +8,7 @@ import "@fontsource/poppins/500.css"; // Medium
 import "@fontsource/poppins/700.css"; // Bold
 import {ThemeProvider} from "@mui/material";
 import { CssBaseline } from "@mui/material";
-import theme from "./assets/components/constants/theme.ts";
+import theme from "./assets/components/constants/themes/theme.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

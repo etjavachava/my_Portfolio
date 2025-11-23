@@ -1,14 +1,15 @@
 import { Box, Stack, Typography } from '@mui/material';
 import SocialMediaLinks from '../components/socialMediaLinks'
+import { goldBorderTransparent } from '../components/constants/themes/colors';
 
 
 function FooterPage() {
   return (
     <>
-      <Stack spacing={4} sx={{ background: "linear-gradient(135deg, #1e0b3e 0%, #2d1b4e 100%)"}}>
+      <Stack spacing={4} sx={{borderTop:`1px solid ${goldBorderTransparent}`}}>
         <Box textAlign={'center'} justifyContent={'center'}>
-          <Typography variant="h2" gutterBottom color='primary'>Ernest</Typography>
-          <Typography variant='body1' color='primary'>Web Developer | Photographer | Chatbot Specialist</Typography>
+          <Typography variant="h2" gutterBottom color='text.secondary'>Ernest</Typography>
+          <Typography variant='body1' color='text.secondery' >Web Developer | Photographer | Chatbot Specialist</Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
@@ -17,8 +18,8 @@ function FooterPage() {
     <SocialMediaLinks/>
         </Box>
       </Stack>
-      <Box sx={{  borderTop: "1px solid rgba(157, 78, 221, 0.3) " }} padding={2}>
-        <Typography textAlign={'center'}>© 2025 Ernest All Rights Reserved.</Typography>
+      <Box sx={{  borderTop: `1px solid ${goldBorderTransparent}`}} padding={2}>
+        <Typography textAlign={'center'} color='primary'>© 2025 Ernest All Rights Reserved.</Typography>
       </Box>
     </>
   );

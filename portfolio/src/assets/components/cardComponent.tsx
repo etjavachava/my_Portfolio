@@ -45,7 +45,7 @@ function CardComponent({
   minHeight="260px",
   gap="30px",
   onClick,
-  hover = true,
+ 
 }: CardComponentProps) {
   return (
     <Card 
@@ -56,14 +56,6 @@ function CardComponent({
         height,
         maxWidth,
         gap:{gap},
-        cursor: onClick ? "pointer" : "default",
-        transition: hover ? "all 0.2s ease-in-out" : "none",
-        "&:hover": hover
-          ? {
-              transform: "translateY(-10px)",
-            boxShadow:" 0 20px 40px rgba(124, 58, 237, 0.4)"
-            }
-          : {},
         ...sx,
       }}
       elevation={elevation}

@@ -1,8 +1,8 @@
 import { Box, Grid, Typography, TextField, Stack } from '@mui/material';
 import ButtonComponent from '../components/buttonComponent';
 import ProfileInfo from '../components/profileInfo';
-import { customColors } from '../components/constants/colors';
 import { Send } from '@mui/icons-material';
+import { goldBorderTransparent } from '../components/constants/themes/colors';
 
 function ContactMePage() {
   return (
@@ -18,9 +18,9 @@ function ContactMePage() {
       <Grid container  >
         <Grid size={{xs:12,md:6}}>
           <Stack component="form" >
-            <Box sx={{backgroundColor:"rgba(157, 78, 221, 0.1)",  padding:"40px" ,
+            <Box sx={{backgroundColor:"secondary.main",  padding:"40px" ,
             borderRadius:"12px" ,
-            border:" 1px solid rgba(157, 78, 221, 0.2);"}}>
+            border:`1px solid ${goldBorderTransparent}`}}>
               <Typography textAlign={'left'} mb={1}>Name*</Typography>
             <TextField
               sx={{
@@ -88,7 +88,7 @@ function ContactMePage() {
           </Stack>
         </Grid>
         <Grid size={{xs:12,md:6}} >
-          <Typography variant="h3" gutterBottom sx={{color:customColors.primary}}>
+          <Typography variant="h3" gutterBottom >
             Personal Details
           </Typography>
           <ProfileInfo
