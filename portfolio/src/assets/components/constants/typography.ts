@@ -9,7 +9,9 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 700,
     fontSize: '3.5rem',
     lineHeight: 1.2,
-    color:goldMain
+    color:goldMain,
+    
+    
   },
   h2: {
     fontWeight: 700,
@@ -21,7 +23,10 @@ color:goldMain
     fontWeight: 700,
     fontSize: '1.75rem',
     lineHeight: 1.4,
-    color:textPrimary
+    color:textPrimary,
+          '@media (min-width:600px)': {
+        fontSize: '1.5rem',
+      },
   },
   h4: {
     fontWeight: 600,

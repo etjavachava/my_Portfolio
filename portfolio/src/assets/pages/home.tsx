@@ -1,6 +1,6 @@
 import ButtonComponent from '../components/buttonComponent';
 
-import { Image } from '../components/imageComponent';
+import { Image } from '../components/image/imageComponent';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
 import { TypeAnimation } from 'react-type-animation';
