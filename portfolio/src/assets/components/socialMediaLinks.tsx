@@ -14,40 +14,40 @@ function SocialMediaLinks({sx}:SocialMediaLinksProps){
           }}>
             <IconButton color="inherit" href="https://github.com/etjavachava" target="_blank">
              <GitHubIcon  sx={{'&:hover':{
-      background:"  #b794f6",
-            transform: "translateY(-5px) scale(1.1)",
+    
+            transform: "translateY(-5px) scale(3.1)",
             borderColor:" #fff" ,
-            boxShadow:"0 8px 20px rgba(183, 148, 246, 0.4) " ,
+     
                borderRadius:"50%",
             padding:"5px"
  },...sx}} />
             </IconButton>
             <IconButton color="inherit" href="https://wa.me/263775294734" target="_blank">
             <WhatsAppIcon  sx={{'&:hover':{
-      background:"  #b794f6",
-            transform: "translateY(-5px) scale(1.1)",
+      
+            transform: "translateY(-5px) scale(3.1)",
             borderColor:" #fff" ,
-            boxShadow:"0 8px 20px rgba(183, 148, 246, 0.4) " ,
+         transition:"all 0.2s ease-in-out",
                borderRadius:"50%",
             padding:"5px"
  },...sx}}/>
             </IconButton>
             <IconButton color="inherit" href="https://www.facebook.com/ernesttapiwajavachava.javachava/" target="_blank">
               <FacebookIcon sx={{'&:hover':{
-      background:"  #b794f6",
-            transform: "translateY(-5px) scale(1.1)",
+    
+            transform: "translateY(-5px) scale(3.1)",
             borderColor:" #fff" ,
-            boxShadow:"0 8px 20px rgba(183, 148, 246, 0.4) " ,
+      transition:"all 0.2s ease-in-out",
                borderRadius:"50%",
             padding:"5px"
  },...sx}}/>
             </IconButton>
             <IconButton color="inherit" href="https://www.linkedin.com/in/e-t-jay-beats-b779532a3/" target="_blank">
               <LinkedInIcon  sx={{'&:hover':{
-      background:"  #b794f6",
-            transform: "translateY(-8px) scale(1.1)",
+
+            transform: "translateY(-8px) scale(3.1)",
             borderColor:" #fff" ,
-            boxShadow:"0 10px 30px rgba(183, 148, 246, 0.4) " ,
+        
              transition:"all 0.2s ease-in-out",
             padding:"5px"
  },...sx}} />

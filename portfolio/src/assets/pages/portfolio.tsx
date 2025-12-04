@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Grid, Typography, Stack } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import CardComponent from '../components/cardComponent';
 import ButtonComponent from '../components/buttonComponent';
 import projects from '../components/project';
