@@ -40,6 +40,7 @@ function Navigation() {
           <ButtonComponent
             type="button"
             value="Download CV"
+            href='https://drive.google.com/file/d/1tJMKWbcnJxvMiT5rdmVVvXJyaLFEnODa/view?usp=drive_link'
             icon={<FileDownloadIcon />}
           />
         </Box>
