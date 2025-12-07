@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Box, Container } from '@mui/material';
 import LoadingComponent from './assets/components/LoadingComponent';
 import Navigation from './assets/components/navigation/navigation';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const Home = lazy(() => import('./assets/pages/home'));
 const AboutMePage = lazy(() => import('./assets/pages/aboutMe'));
@@ -18,6 +18,7 @@ function App() {
       component="div"
       sx={{ minHeight: '100vh', color: 'white' }}
     >
+      <SpeedInsights/>
       <Navigation />
       <Suspense fallback={<LoadingComponent />}>
         <Box
