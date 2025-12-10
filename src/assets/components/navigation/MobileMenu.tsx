@@ -37,6 +37,11 @@ const MobileMenu = ({ links }: MobileMenuProps) => {
         anchor="left" 
         open={openDrawer} 
         onClose={toggleDrawer(false)}
+                disableScrollLock
+    
+        disableRestoreFocus
+        keepMounted
+
         slotProps={{ paper:{sx:{width: 300, pt: 5, bgcolor: 'background.default'}}  }}
       >
         <Box 
