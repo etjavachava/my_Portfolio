@@ -60,7 +60,7 @@ function App() {
         </Container>
         <Box component="section" id="footer">
           <FooterPage />
-        </Box>
+         </Box>
       </Suspense>
     </Box>
   );
