@@ -7,40 +7,51 @@ export const typography: TypographyVariantsOptions = {
 
   h1: {
     fontWeight: 700,
-    fontSize: '3.5rem',
+    fontSize: '2.5rem',
     lineHeight: 1.2,
     color:goldMain,
-    
+        '@media (min-width:600px)': {
+      fontSize: '3.5rem',
+    },
     
   },
   h2: {
     fontWeight: 700,
-    fontSize: '2.625rem',
+    fontSize: '2rem',
     lineHeight: 1.3,
-color:goldMain
+    color:goldMain,
+    '@media (min-width:600px)': {
+      fontSize: '2.625rem',
+    },
   },
   h3: {
     fontWeight: 700,
-    fontSize: '1.75rem',
+    fontSize: '1.5rem',
     lineHeight: 1.4,
     color:textPrimary,
           '@media (min-width:600px)': {
-        fontSize: '1.5rem',
+        fontSize: '1.75rem',
       },
   },
   h4: {
     fontWeight: 600,
-    fontSize: '1.5rem',
+    fontSize: '1.25rem',
     lineHeight: 1.4,
+       '@media (min-width:600px)': {
+      fontSize: '1.5rem',
+    },
   },
   h5: {
     fontWeight: 600,
-    fontSize: '1.125rem',
+    fontSize: '1rem',
     lineHeight: 1.5,
+    '@media (min-width:600px)': {
+      fontSize: '1.125rem',
+    },
   },
   h6: {
     fontWeight: 700,
-    fontSize: '0.875',
+    fontSize: '0.875rem',
     lineHeight: 1.5,
     letterSpacing: '1px',
     textTransform: 'uppercase',
@@ -48,39 +59,50 @@ color:goldMain
 
   body1: {
     fontWeight: 400,
-    fontSize: '1.125rem',
+    fontSize: '1rem',
     lineHeight: 1.6,
-    color:textPrimary
+    color:textPrimary,
+    '@media (min-width:600px)': {
+      fontSize: '1.125rem',
+    },
   },
   body2: {
     fontWeight: 400,
-    fontSize: '1rem',
+    fontSize: '0.875rem',
     lineHeight: 1.6,
+    '@media (min-width:600px)': {
+      fontSize: '1rem',
+    },
   },
 
   subtitle1: {
     fontWeight: 600,
-    fontSize: '1rem',
+    fontSize: '0.875rem',
     lineHeight: 1.6,
-    color:textSecondary
+    color:textSecondary,
+    '@media (min-width:600px)': {
+      fontSize: '1rem',
+    },
   },
   subtitle2: {
     fontWeight: 600,
-    fontSize: '0.875',
+    fontSize: '0.875rem',
     lineHeight: 1.6,
   },
 
   button: {
-    fontWeight: 600,
-    fontSize: '1rem',
+    fontWeight: 800,
+    fontSize: '0.875rem',
     lineHeight: 1.5,
     letterSpacing: '0.5px',
- 
+    '@media (min-width:600px)': {
+      fontSize: '1rem',
+    },
   },
 
   caption: {
     fontWeight: 400,
-    fontSize: '0.875red',
+    fontSize: '0.875rem',
     lineHeight: 1.6,
     color:textTertiary,
   },
@@ -93,3 +115,4 @@ color:goldMain
     textTransform: 'uppercase',
   },
 };
+
